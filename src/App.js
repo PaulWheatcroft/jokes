@@ -31,16 +31,23 @@ const Joke = () => {
   return (
     <div className="joke">
       <div className="button-container">
-        <button onClick={nextJoke} className="button green">
+        <button onClick={nextJoke} className="button green single-day-regular">
           {!joke ? "Get Joke" : "Next"}
         </button>
 
         {!joke ? (
-          <button onClick={revealPunchline} className="button grey" disabled>
+          <button
+            onClick={revealPunchline}
+            className="button grey single-day-regular"
+            disabled
+          >
             Reveal
           </button>
         ) : (
-          <button onClick={revealPunchline} className="button pink">
+          <button
+            onClick={revealPunchline}
+            className="button pink single-day-regular"
+          >
             Reveal
           </button>
         )}
@@ -48,7 +55,7 @@ const Joke = () => {
 
       {joke && (
         <>
-          <h2>{joke.setup}</h2>
+          <h2 className="single-day-regular tilted-down">{joke.setup}</h2>
           <h3 className="punchline" Style="display: none">
             {joke.punchline}
           </h3>
@@ -61,11 +68,11 @@ const Joke = () => {
 function App() {
   return (
     <div className="App">
-      <h1>The joke generator</h1>
-      <h2>
+      <h1 className="single-day-heading tilted-up">The joke generator</h1>
+      <p>
         This is a joke generator. It will generate a random joke and display it
         on the screen.
-      </h2>
+      </p>
       <p>
         Click the next button to see another joke. Click the reveal button to
         see the punchline.
