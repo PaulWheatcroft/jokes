@@ -32,7 +32,7 @@ const Joke = () => {
     <div className="joke">
       <div className="button-container">
         <button onClick={nextJoke} className="button green single-day-regular">
-          {!joke ? "Get Joke" : "Next"}
+          {!joke ? "Get" : "Next"}
         </button>
 
         {!joke ? (
