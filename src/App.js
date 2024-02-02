@@ -56,7 +56,7 @@ const Joke = () => {
       {joke && (
         <>
           <h2 className="single-day-regular tilted-down">{joke.setup}</h2>
-          <h3 className="punchline" Style="display: none">
+          <h3 className="punchline tilted-up" Style="display: none">
             {joke.punchline}
           </h3>
         </>
